@@ -7,7 +7,7 @@ Create a simple calendar application that allows a user to save events for each 
 
 ## Link to my GitHub Repo
 
-
+https://github.com/JD2929/dailyWorkScheduler
 
 ## Link to the deployed page
 
