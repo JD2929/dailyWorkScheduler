@@ -26,40 +26,34 @@ $(function () {
       localStorage.setItem(hour, text)
     })
 
+//get current hour add one as dayjs uses 0 to 23
+    var currentHour = dayjs().hour() +1
 
-    var currentTime = dayjs().hour
+    // find all timeBlocks and remove all present/past/future class and set to future
+    var timeBlock = $(".time-block");
+    timeBlock.removeClass("past")
+    timeBlock.removeClass("present") 
+    timeBlock.removeClass("future")
+    //below will only be updating past and present therefore set to future by default
+    timeBlock.addClass("future")
 
-    var timeBlock = $(".time-block").attr("class");
-    var past = $(".past").attr("class");
-    var present = $(".present").attr("class");
-    var future = $(".future").attr("class");
-
-    if (timeBlock < currentTime) function past() {
-      $('timeBlock')
-        .removeClass(past)
-        .addClass(future)
-    } else if (timeBlock = currentTime) function present() {
-      $('timeBlock')
-        .removeClass('future')
-        .addClass('present')
-    } else function future() {
-      $('timeBlock') = ('future')
+    //loop from the start of the day to hour before present
+    for ( var pastHour = 9; pastHour < currentHour; pastHour++){
+      //find the timeBlock
+      var pastBlock = $("#hour-"+ pastHour)
+      console.log (pastBlock)
+        //add class past to the timeBlock
+        pastBlock.removeClass("future") 
+    pastBlock.addClass("past")
     }
+    //find timeBlock of present hour
+    var presentBlock = $("#hour-"+ currentHour)   
+    
+    //add class of present to the timeBlock
+   presentBlock.removeClass("future")
+    presentBlock.addClass("present")
+    
   })
 
-
-
-
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
 
 })
