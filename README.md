@@ -17,3 +17,5 @@ https://github.com/JD2929/dailyWorkScheduler
 https://jd2929.github.io/dailyWorkScheduler/
 
 ## Screenshot of the deployed page
+
+![image](https://github.com/JD2929/dailyWorkScheduler/assets/139637504/0d30c732-6a95-4bfa-8cef-1056527a025c)
