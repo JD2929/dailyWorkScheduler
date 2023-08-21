@@ -14,5 +14,6 @@ https://github.com/JD2929/dailyWorkScheduler
 
 ## Link to the deployed page
 
+https://jd2929.github.io/dailyWorkScheduler/
 
 ## Screenshot of the deployed page
