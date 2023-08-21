@@ -1,6 +1,5 @@
 
 
-$("#currentDay").text(dayjs().format('dddd D MMMM, YYYY'))
 
 
 
@@ -10,12 +9,21 @@ $(function () {
 
   $(document).ready(function () {
 
+    $("#currentDay").text(dayjs().format('dddd D MMMM, YYYY'))
 
+    for ( var hourToGet = 9; hourToGet < 18; hourToGet++)
+    {var idToGet = "hour-" + hourToGet
+      var description = localStorage.getItem(idToGet)
+      var timeBlock = $("#"+idToGet)
+      console.log(timeBlock)
+      timeBlock.children("TextArea").val(description) 
+    }
     $(".saveBtn").on('click', function () {
-      var text = $(this).siblings('.description').val()
+      var text = $(this).siblings(".description").val()
+      console.log (text)
       var hour = $(this).parent().attr("id")
-    
-      localStorage.getItem(hour,text)
+      console.log(hour)
+      localStorage.setItem(hour, text)
     })
 
 
