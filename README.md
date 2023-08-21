@@ -18,4 +18,6 @@ https://jd2929.github.io/dailyWorkScheduler/
 
 ## Screenshot of the deployed page
 
+Screenshot is taken at 11:57pm therefore all blocks are grey as they are all past the time of day. 
+
 ![image](https://github.com/JD2929/dailyWorkScheduler/assets/139637504/0d30c732-6a95-4bfa-8cef-1056527a025c)
